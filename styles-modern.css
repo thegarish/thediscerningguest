@@ -551,4 +551,20 @@ body{
 /* Ensure modals are always above hero/header overlays */
 .modal { position: relative; z-index: 9999; }
 
+.footer__archive{
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: .35;
+}
+
+.footer__archive a{
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.footer__archive a:hover{
+  opacity: .8;
+}
+
+
 
