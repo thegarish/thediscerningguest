@@ -5,38 +5,37 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>The Discerning Guest™</title>
   <meta name="description" content="A modernized review experience for domestic hospitality." />
-  <link rel="stylesheet" href="styles-modern.css" />
+<link rel="stylesheet" href="styles-modern.css?v=20260216-7" />
 </head>
 
 <body>
   <header class="top">
     <div class="top__inner">
-      <div class="logo">
-        <span class="logo__mark">✶</span>
-        <span class="logo__text">The Discerning Guest™</span>
-      </div>
+		<a href="index-modern.html" class="brand">
+		  <span class="brand__mark">dg</span>
+		  <span class="brand__name">The Discerning Guest™</span>
+		</a>
 
-      <form class="search" onsubmit="event.preventDefault(); alert('Search results: intentionally sparse.');">
-        <input class="search__input" type="text" value="Best overnight stays" aria-label="Search term" />
+      <form class="search" onsubmit="event.preventDefault(); alert('No search results other than your house.');">
+        <input class="search__input" type="text" value="Where to sponge?" aria-label="Search term" />
         <div class="search__divider"></div>
         <input class="search__input" type="text" value="Undisclosed, USA" aria-label="Location" />
         <button class="search__btn" type="submit" aria-label="Search">🔍</button>
       </form>
 
       <nav class="top__nav" aria-label="Top navigation">
-        <a href="#" onclick="alert('Business tools currently under evaluation.'); return false;">For Hosts</a>
+        <a href="#" onclick="alert('Host responses not available.'); return false;">For Hosts</a>
         <a href="#" onclick="alert('You have already written the maximum number of reviews: 1.'); return false;">Write a Review</a>
-        <a class="pill" href="#" onclick="alert('Log in: not required, but respected.'); return false;">Log In</a>
-        <a class="pill pill--primary" href="#" onclick="alert('Sign up: implied.'); return false;">Sign Up</a>
+        <a class="pill" href="#" onclick="alert('Log in: only for younger brothers.'); return false;">Log In</a>
+        <a class="pill pill--primary" href="#" onclick="alert('Sign up: you wish.'); return false;">Sign Up</a>
       </nav>
     </div>
 
     <div class="cats" aria-label="Categories">
-      <a href="#" onclick="return false;">Restaurants</a>
-      <a href="#" onclick="return false;">Home &amp; Garden</a>
-      <a href="#" onclick="return false;">Auto Services</a>
-      <a href="#" onclick="return false;">Health &amp; Beauty</a>
-      <a href="#" onclick="return false;">Travel</a>
+      <a href="#" onclick="return false;">Family Residences</a>
+      <a href="#" onclick="return false;">Bowling Score Reviews</a>
+      <a href="#" onclick="return false;">Band Bass Performance Ratings</a>
+      <a href="#" onclick="return false;">Personal Appearance</a>
       <a href="#" onclick="return false;">More ▾</a>
     </div>
   </header>
@@ -55,10 +54,15 @@
     </div>
 
     <div class="hero__overlay">
-      <div class="hero__eyebrow">Featured</div>
-      <h1 class="hero__title">Recommended Reviews</h1>
-      <div class="hero__meta">Domestic hospitality • Verified stays (self-certified) • Premium ambiguity</div>
-      <button class="hero__cta" type="button" onclick="document.getElementById('cards').scrollIntoView({behavior:'smooth'});">
+		<div class="hero__eyebrow">Featured</div>
+		<h1 class="hero__title">The Discerning Guest™</h1>
+		<div class="hero__subhead">
+		  An Independent Authority on Domestic Hospitality and Personal Standards
+		</div>
+		<div class="hero__meta">
+		  Independent • Unaffiliated • Unapologetic
+		</div>
+      <button class="hero__cta" type="button" onclick="document.getElementById('firstReviewTop').scrollIntoView({behavior:'smooth', block:'start'});">
         Browse 4 reviews
       </button>
     </div>
@@ -75,13 +79,13 @@
     <section class="cards" id="cards" aria-label="Review cards">
       <!-- Card 1: Meh (works) -->
       <a class="cardtile" href="#" data-open="meh">
-        <div class="cardtile__img">
+<div class="cardtile__img" id="firstReviewTop">
           <img src="img/meh-detail.jpg" alt="Obscure detail photo (non-identifying)" />
           <div class="cardtile__badge">Working</div>
         </div>
         <div class="cardtile__body">
-          <div class="cardtile__title">Meh stay in Maryland</div>
-          <div class="cardtile__meta">★★★★☆ <span class="muted">• 1 night • Reservation status: implied</span></div>
+          <div class="cardtile__title">Well, it's in Maryland</div>
+          <div class="cardtile__meta">★★★☆☆ <span class="muted"> 1 visit</span></div>
           <div class="cardtile__sub">“A confident property. Its particulars remain respectfully unexamined.”</div>
         </div>
       </a>
@@ -203,15 +207,15 @@
         Upgrade to access additional reviews, extended commentary, and premium ambiguity.
       </p>
       <ul class="modal__ul">
-        <li>Early access to “Glass Palace” coverage</li>
         <li>Priority access to interpretive experiences</li>
         <li>Exclusive ™ benefits and light judgment</li>
+        <li>The ability to rate your brother's house. Haha, nope, that's not happening</li>
       </ul>
       <div class="modal__actions">
-        <button class="btn" type="button" onclick="alert('Upgrade purchase declined by: reality.');">Upgrade Now</button>
+        <button class="btn" type="button" onclick="alert('You must have Discerning Guest Premium™ to purchase Discerning Guest Plus™.');">Upgrade Now</button>
         <button class="btn btn--ghost" type="button" data-close="plus">Not at this time</button>
       </div>
-      <div class="modal__fine">No payment methods accepted. No refunds offered. All rights reserved (emotionally).</div>
+      <div class="modal__fine">No payment methods accepted. No refunds offered. All rights reserved.</div>
     </div>
   </div>
 
