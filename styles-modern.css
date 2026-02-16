@@ -566,5 +566,26 @@ body{
   opacity: .8;
 }
 
+/* Mobile header layout */
+@media (max-width: 900px){
+  .top__inner{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .search{
+    order: 3;
+    width: 100%;
+    max-width: none;
+  }
+
+  .top__nav{
+    order: 2;
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
+
 
 
