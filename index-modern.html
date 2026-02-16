@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Discerning Guest™</title>
+  <meta name="description" content="A modernized review experience for domestic hospitality." />
+  <link rel="stylesheet" href="styles-modern.css" />
+</head>
+
+<body>
+  <header class="top">
+    <div class="top__inner">
+      <div class="logo">
+        <span class="logo__mark">✶</span>
+        <span class="logo__text">The Discerning Guest™</span>
+      </div>
+
+      <form class="search" onsubmit="event.preventDefault(); alert('Search results: intentionally sparse.');">
+        <input class="search__input" type="text" value="Best overnight stays" aria-label="Search term" />
+        <div class="search__divider"></div>
+        <input class="search__input" type="text" value="Undisclosed, USA" aria-label="Location" />
+        <button class="search__btn" type="submit" aria-label="Search">🔍</button>
+      </form>
+
+      <nav class="top__nav" aria-label="Top navigation">
+        <a href="#" onclick="alert('Business tools currently under evaluation.'); return false;">For Hosts</a>
+        <a href="#" onclick="alert('You have already written the maximum number of reviews: 1.'); return false;">Write a Review</a>
+        <a class="pill" href="#" onclick="alert('Log in: not required, but respected.'); return false;">Log In</a>
+        <a class="pill pill--primary" href="#" onclick="alert('Sign up: implied.'); return false;">Sign Up</a>
+      </nav>
+    </div>
+
+    <div class="cats" aria-label="Categories">
+      <a href="#" onclick="return false;">Restaurants</a>
+      <a href="#" onclick="return false;">Home &amp; Garden</a>
+      <a href="#" onclick="return false;">Auto Services</a>
+      <a href="#" onclick="return false;">Health &amp; Beauty</a>
+      <a href="#" onclick="return false;">Travel</a>
+      <a href="#" onclick="return false;">More ▾</a>
+    </div>
+  </header>
+
+  <section class="hero hero--carousel fullbleed" aria-label="Hero image carousel">
+    <div class="hero__slides" id="heroSlides">
+      <figure class="hero__slide is-active">
+        <img class="hero__img" src="img/hero1_room.jpg" alt="Vintage interior scene (generic, non-identifying)" />
+      </figure>
+      <figure class="hero__slide">
+        <img class="hero__img" src="img/hero2_phone.jpg" alt="Rotary phone and cassette tapes (generic still life)" />
+      </figure>
+      <figure class="hero__slide">
+        <img class="hero__img" src="img/hero3_tv.jpg" alt="CRT television with books and a bust (generic still life)" />
+      </figure>
+    </div>
+
+    <div class="hero__overlay">
+      <div class="hero__eyebrow">Featured</div>
+      <h1 class="hero__title">Recommended Reviews</h1>
+      <div class="hero__meta">Domestic hospitality • Verified stays (self-certified) • Premium ambiguity</div>
+      <button class="hero__cta" type="button" onclick="document.getElementById('cards').scrollIntoView({behavior:'smooth'});">
+        Browse 4 reviews
+      </button>
+    </div>
+
+    <div class="hero__controls">
+      <button class="hero__btn" type="button" data-dir="-1" aria-label="Previous image">‹</button>
+      <button class="hero__btn" type="button" data-dir="1" aria-label="Next image">›</button>
+    </div>
+
+    <div class="hero__dots" id="heroDots" aria-label="Carousel pagination"></div>
+  </section>
+
+  <main class="wrap">
+    <section class="cards" id="cards" aria-label="Review cards">
+      <!-- Card 1: Meh (works) -->
+      <a class="cardtile" href="#" data-open="meh">
+        <div class="cardtile__img">
+          <img src="img/meh-detail.jpg" alt="Obscure detail photo (non-identifying)" />
+          <div class="cardtile__badge">Working</div>
+        </div>
+        <div class="cardtile__body">
+          <div class="cardtile__title">Meh stay in Maryland</div>
+          <div class="cardtile__meta">★★★★☆ <span class="muted">• 1 night • Reservation status: implied</span></div>
+          <div class="cardtile__sub">“A confident property. Its particulars remain respectfully unexamined.”</div>
+        </div>
+      </a>
+
+      <!-- Card 2: Plus (locked) -->
+      <a class="cardtile" href="#" data-plus="1">
+        <div class="cardtile__img">
+          <img src="img/mansion1.jpg" alt="Modern dream home (generic)" />
+          <div class="cardtile__lock">Plus™</div>
+        </div>
+        <div class="cardtile__body">
+          <div class="cardtile__title">The Glass Palace</div>
+          <div class="cardtile__meta">★★★★★ <span class="muted">• 2 nights • Reflective surfaces</span></div>
+          <div class="cardtile__sub">“A home so modern it briefly forgot my name.”</div>
+        </div>
+      </a>
+
+      <!-- Card 3: Plus (locked) -->
+      <a class="cardtile" href="#" data-plus="1">
+        <div class="cardtile__img">
+          <img src="img/mansion2.jpg" alt="Modern mansion interior (generic)" />
+          <div class="cardtile__lock">Plus™</div>
+        </div>
+        <div class="cardtile__body">
+          <div class="cardtile__title">Infinity Countertop Estate</div>
+          <div class="cardtile__meta">★★★★★ <span class="muted">• 1 night • Marble confidence</span></div>
+          <div class="cardtile__sub">“Every surface was judging me, politely.”</div>
+        </div>
+      </a>
+
+      <!-- Card 4: Plus (locked) -->
+      <a class="cardtile" href="#" data-plus="1">
+        <div class="cardtile__img">
+          <img src="img/mansion3.jpg" alt="Luxury modern home (generic)" />
+          <div class="cardtile__lock">Plus™</div>
+        </div>
+        <div class="cardtile__body">
+          <div class="cardtile__title">The Silent Atrium</div>
+          <div class="cardtile__meta">★★★★★ <span class="muted">• 3 nights • Dramatic lighting</span></div>
+          <div class="cardtile__sub">“The echo had a better résumé than I do.”</div>
+        </div>
+      </a>
+    </section>
+
+    <footer class="footer">
+      <div>© 2026 The Discerning Guest™</div>
+      <div class="muted">Discerning Guest Plus™ sold separately • Itinerary: fluid</div>
+    </footer>
+  </main>
+
+  <!-- MEH REVIEW MODAL -->
+  <div class="modal" id="mehModal" role="dialog" aria-modal="true" aria-labelledby="mehTitle" aria-hidden="true">
+    <div class="modal__backdrop" data-close="meh"></div>
+    <div class="modal__panel modal__panel--wide" role="document">
+      <div class="modal__top">
+        <div class="modal__badge">Review</div>
+        <button class="modal__x" type="button" data-close="meh" aria-label="Close">✕</button>
+      </div>
+
+      <div class="mehgrid">
+        <div>
+          <h3 class="modal__title" id="mehTitle">Meh stay in Maryland</h3>
+          <div class="mehmeta">★★★★☆ <span class="muted">• Verified Stay ✓ (self-certified) • Location: Undisclosed (by request)</span></div>
+
+          <p class="quote">
+            “A confident property. Its presence is undeniable, though its particulars remain respectfully unexamined.”
+          </p>
+
+          <h4 class="subhead">Category Ratings</h4>
+          <div class="ratings">
+            <div class="rating"><div class="rating__k">Hospitality</div><div class="rating__v">Host demonstrated competence and a controlled enthusiasm.</div><div class="rating__s">4/5</div></div>
+            <div class="rating"><div class="rating__k">Sleeping Experience</div><div class="rating__v">Bedding offered support with a quiet insistence.</div><div class="rating__s">4/5</div></div>
+            <div class="rating"><div class="rating__k">Breakfast</div><div class="rating__v">Provisions appeared. They were correct.</div><div class="rating__s">5/5</div></div>
+            <div class="rating"><div class="rating__k">Ambient Sound</div><div class="rating__v">The building expressed itself modestly.</div><div class="rating__s">4/5</div></div>
+            <div class="rating"><div class="rating__k">Wayfinding</div><div class="rating__v">Several doors existed. Their intentions varied.</div><div class="rating__s">3/5</div></div>
+            <div class="rating"><div class="rating__k">Modern Amenities</div><div class="rating__v">Power was available. So was uncertainty.</div><div class="rating__s">3/5</div></div>
+            <div class="rating"><div class="rating__k">Overall Privacy</div><div class="rating__v">Privacy posture was strong, admired, and feared.</div><div class="rating__s">5/5</div></div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="sidebox">
+            <div class="sidebox__title">Property Highlights</div>
+            <ul class="bullets">
+              <li>Water remained wet.</li>
+              <li>Towels showed evidence of prior optimism.</li>
+              <li>Surfaces were generally horizontal.</li>
+              <li>Air was present and behaved as expected.</li>
+            </ul>
+          </div>
+
+          <div class="sidebox">
+            <div class="sidebox__title">Notes</div>
+            <p class="p">
+              <strong>Advance notice provided:</strong> insufficient.<br/>
+              <strong>Requests:</strong> neither accepted nor rejected.<br/>
+              <strong>Disclosure:</strong> no identifying details included by design.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLUS MODAL -->
+  <div class="modal" id="plusModal" role="dialog" aria-modal="true" aria-labelledby="plusTitle" aria-hidden="true">
+    <div class="modal__backdrop" data-close="plus"></div>
+    <div class="modal__panel" role="document">
+      <div class="modal__top">
+        <div class="modal__badge">Discerning Guest Plus™</div>
+        <button class="modal__x" type="button" data-close="plus" aria-label="Close">✕</button>
+      </div>
+      <h3 class="modal__title" id="plusTitle">This review requires Discerning Guest Plus™</h3>
+      <p class="modal__p">
+        You’ve reached your free review limit: <strong>1 of 1</strong>.
+        Upgrade to access additional reviews, extended commentary, and premium ambiguity.
+      </p>
+      <ul class="modal__ul">
+        <li>Early access to “Glass Palace” coverage</li>
+        <li>Priority access to interpretive experiences</li>
+        <li>Exclusive ™ benefits and light judgment</li>
+      </ul>
+      <div class="modal__actions">
+        <button class="btn" type="button" onclick="alert('Upgrade purchase declined by: reality.');">Upgrade Now</button>
+        <button class="btn btn--ghost" type="button" data-close="plus">Not at this time</button>
+      </div>
+      <div class="modal__fine">No payment methods accepted. No refunds offered. All rights reserved (emotionally).</div>
+    </div>
+  </div>
+
+  <script>
+    // Carousel
+    (function () {
+      const slides = Array.from(document.querySelectorAll(".hero__slide"));
+      const dotsWrap = document.getElementById("heroDots");
+      const controls = Array.from(document.querySelectorAll(".hero__btn"));
+      if (!slides.length || !dotsWrap || !controls.length) return;
+
+      let i = 0;
+      let timer = null;
+
+      function renderDots() {
+        dotsWrap.innerHTML = "";
+        slides.forEach((_, idx) => {
+          const b = document.createElement("button");
+          b.className = "hero__dot" + (idx === i ? " is-active" : "");
+          b.type = "button";
+          b.setAttribute("aria-label", "Go to image " + (idx + 1));
+          b.addEventListener("click", () => go(idx, true));
+          dotsWrap.appendChild(b);
+        });
+      }
+
+      function show(idx) {
+        slides.forEach(s => s.classList.remove("is-active"));
+        slides[idx].classList.add("is-active");
+        i = idx;
+        renderDots();
+      }
+
+      function go(next, userAction) {
+        const idx = (next + slides.length) % slides.length;
+        show(idx);
+        if (userAction) restart();
+      }
+
+      function restart() {
+        if (timer) clearInterval(timer);
+        timer = setInterval(() => go(i + 1, false), 4500);
+      }
+
+      controls.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const dir = Number(btn.getAttribute("data-dir"));
+          go(i + dir, true);
+        });
+      });
+
+      show(0);
+      restart();
+    })();
+
+    // Modals
+    (function(){
+      const mehModal = document.getElementById("mehModal");
+      const plusModal = document.getElementById("plusModal");
+
+function open(modal){
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";   // <-- ADD THIS
+}
+
+function close(modal){
+  modal.classList.remove("is-open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";         // <-- ADD THIS
+}
+
+      document.querySelectorAll("[data-open='meh']").forEach(el => {
+        el.addEventListener("click", (e) => { e.preventDefault(); open(mehModal); });
+      });
+
+      document.querySelectorAll("[data-plus='1']").forEach(el => {
+        el.addEventListener("click", (e) => { e.preventDefault(); open(plusModal); });
+      });
+
+      document.querySelectorAll("[data-close='meh']").forEach(el => el.addEventListener("click", () => close(mehModal)));
+      document.querySelectorAll("[data-close='plus']").forEach(el => el.addEventListener("click", () => close(plusModal)));
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key !== "Escape") return;
+        if (mehModal.classList.contains("is-open")) close(mehModal);
+        if (plusModal.classList.contains("is-open")) close(plusModal);
+      });
+    })();
+  </script>
+</body>
+</html>
